@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+/* .ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+:root {
+  --black: #191919;
+  --peach: #ff785a;
+  --orange: #ffaa5a;
+  --sunny: #ffd25a;
+  --yellow: #fff05a;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  background-color: var(--peach);
+  color: var(--black);
+  font-family: "ubuntu";
+  display: grid;
+  grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer";
+  justify-content: center;
+}
+nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
