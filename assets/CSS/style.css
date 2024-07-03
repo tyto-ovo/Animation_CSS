@@ -46,6 +46,9 @@ nav {
   gap: 8px;
   padding: 8px;
 }
+/* .logo:hover {
+
+} */
 .logo i {
   padding-top: 8px;
 }
@@ -78,10 +81,7 @@ main {
 .product-container {
   display: flex;
   flex-direction: column;
-  /*   grid-template-columns: 1fr; */
   gap: 16px;
-  /*   justify-content: center;
-  align-items: center; */
 }
 .product-card {
   justify-content: center;
@@ -104,6 +104,9 @@ main {
 .cabecera img {
   width: 100%;
 }
+.cabecera img:hover {
+  filter: grayscale(100%);
+}
 footer {
   grid-area: footer;
   background-color: var(--peach);
@@ -112,8 +115,29 @@ footer {
   align-items: center;
   padding: 8px;
 }
-@media (min-width: 576px){
+@media (min-width: 576px) {
   body {
-    
+    grid-template-areas:
+      "nav nav nav"
+      "header header header"
+      "main main main"
+      "footer footer footer";
+    min-height: 100vh;
+  }
+  nav .logo {
+    display: flex;
+    justify-content: center;
+  }
+  menu .hamburguesa {
+    display: none;
+  }
+  .desaparecer {
+    display: block;
+    padding-top: 16px;
+    padding-right: 16px;
+  }
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
